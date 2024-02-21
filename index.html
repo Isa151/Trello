@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trello</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="right">
+        <div class="boxes">
+          <img src="./public/icons/Frame.png" onclick="openMain()">
+        </div>
+        <div class="logo">
+          <img src="./public/icons/logo.png" alt="">
+        </div>
+        <nav class="menu">
+          <a href="#">Рабочие пространства 
+            <span>
+              <img src="./public/icons/arrow.png">
+            </span>
+          </a>
+          <a href="#">Недавние 
+            <span>
+              <img src="./public/icons/arrow.png">
+            </span>
+          </a>
+          <a href="#">В избранном
+            <span>
+              <img src="./public/icons/arrow.png">
+            </span>
+          </a>
+          <a href="#">Шаблоны
+            <span>
+              <img src="./public/icons/arrow.png">
+            </span>
+          </a>
+        </nav>
+        <button class="create">Создать</button>
+      </div>
+
+
+
+
+  
+
+      <div class="left">
+        <input type="search"  placeholder="Поиск" required>
+        <div class="acc">
+          <img src="./public/icons/nth.png" alt="">
+          <img src="./public/icons/support.png" alt="">
+          <img src="./public/icons/acc.png" alt="">
+        </div>
+      </div>
+    </header>
+     <main>
+      <header class="underheader">
+        <div class="desk">
+            <div class="desk_logo">
+                 <h1>desk</h1>
+            </div>
+              <nav class="desk_menu">
+                <a href="#">
+                  <img src="./public/icons/star.png" alt="">
+                </a>
+                <a href="#">
+                  <img src="./public/icons/persons.png" alt="">
+                </a>
+              </nav>
+                <button class="desks">
+                  <img src="./public/icons/chart.png" >
+                  По доске
+                </button>
+                <img src="./public/icons/bigarrow.png">
+
+        </div>
+         <div class="rep">
+            <nav class="rep_menu">
+              <img src="./public/icons/rocket.png">
+              <img src="./public/icons/flesh.png">
+            </nav>
+            <img src="./public/icons/filter.png">
+             <h3 class="filters">Фильтры</h3>
+             <div class="sec_acc">
+              <img src="./public/icons/acc.png" alt="">
+             </div>
+             <button class="link">
+                <img src="./public/icons/person.png" alt="">
+                Поделиться
+             </button>
+             <div class="dots">
+              <img src="./public/icons/dots.png" alt="">
+             </div>
+         </div>
+    </header>
+
+
+
+
+
+    <aside id="myAside">
+      <div class="top">
+         <div class="p">
+          <div class="p_img">
+            <img src="./public/icons/p.png">
+          </div>
+          <div class="p_info">
+            <h3>PRODIGY: <span>рабочее</span></h3>
+            <h4>пространство</h4>
+            <p>Бесплатно</p>
+          </div>
+         </div>
+         <div class="close_aside">
+            <img src="./public/icons/closeaside.png"  onclick="closeAside()">
+         </div>
+
+      </div>
+       <div class="middle">
+         <div class="item" id="desk_aside">
+              <img src="./public/icons/desks.png">
+              <h3>Доски</h3>
+         </div>
+         <div class="item" id="members">
+    
+            <img src="./public/icons/members.png">
+          <h3>Учасники</h3>
+            <img src="./public/icons/arrow.png" >
+           </div> 
+         <div class="item" id="settings" >
+            <img src="./public/icons/settings (1).png">
+          <h3>Настройки рабочего
+            пространства</h3>            
+           </div>
+           <h2>Режимы просмотра рабочего прос…</h2>
+           <div class="item" id="table">
+            <img src="./public/icons/table.png">
+            <h3>Таблица</h3>
+       </div>
+       <div class="item" id="kalendar">
+        <img src="./public/icons/kalendar.png">
+        <h3>Каледнарь</h3>
+   </div>
+             <div class="my_desks">
+                  <div class="desk_plus">
+                    <h3>Мои доски</h3>
+                    <img src="./public/icons/bigarrow.png" alt="">
+                  </div>
+                  <div class="desk_item">
+                      <div class="desk_box"></div>
+                      <p>desk</p>
+                  </div>
+             </div>
+         </div>
+
+      </div>
+       
+    </aside>
+     </main>
+
+
+
+
+
+
+
+    <script>
+  function openMain() {
+    document.getElementById("myAside").style.width = "250px";
+    document.getElementById("mainContent").style.width = "calc(100% - 250px)";
+  }
+
+  function closeAside() {
+    document.getElementById("myAside").style.width = "0";
+    document.getElementById("mainContent").style.width = "100%";
+  }
+</script>
+  </div>
+</body>
+
+</html>
