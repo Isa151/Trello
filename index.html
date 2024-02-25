@@ -17,18 +17,19 @@
     <header class="header">
       <div class="right">
         <div class="boxes">
-          <img src="./public/icons/Frame.png" onclick="openMain()">
+          <img src="./public/icons/Frame.png" onclick="openAside()">
         </div>
         <div class="logo">
           <img src="./public/icons/logo.png" alt="">
         </div>
         <nav class="menu">
-          <a href="#">Рабочие пространства 
+          <a href="#">
+              Workspaces
             <span>
               <img src="./public/icons/arrow.png">
             </span>
           </a>
-          <a href="#">Недавние 
+          <a href="#">Recent
             <span>
               <img src="./public/icons/arrow.png">
             </span>
@@ -38,13 +39,13 @@
               <img src="./public/icons/arrow.png">
             </span>
           </a>
-          <a href="#">Шаблоны
+          <a href="#">Templates
             <span>
               <img src="./public/icons/arrow.png">
             </span>
           </a>
         </nav>
-        <button class="create">Создать</button>
+        <button class="create" onclick="openModal()">Create</button>
       </div>
 
 
@@ -77,7 +78,7 @@
               </nav>
                 <button class="desks">
                   <img src="./public/icons/chart.png" >
-                  По доске
+                      By desk
                 </button>
                 <img src="./public/icons/bigarrow.png">
 
@@ -88,13 +89,13 @@
               <img src="./public/icons/flesh.png">
             </nav>
             <img src="./public/icons/filter.png">
-             <h3 class="filters">Фильтры</h3>
+             <h3 class="filters">Filters</h3>
              <div class="sec_acc">
               <img src="./public/icons/acc.png" alt="">
              </div>
              <button class="link">
                 <img src="./public/icons/person.png" alt="">
-                Поделиться
+                Share
              </button>
              <div class="dots">
               <img src="./public/icons/dots.png" alt="">
@@ -113,9 +114,9 @@
             <img src="./public/icons/p.png">
           </div>
           <div class="p_info">
-            <h3>PRODIGY: <span>рабочее</span></h3>
-            <h4>пространство</h4>
-            <p>Бесплатно</p>
+            <h3>PRODIGY: </h3>
+            <h4>Working space</h4>
+            <p>Free</p>
           </div>
          </div>
          <div class="close_aside">
@@ -126,31 +127,32 @@
        <div class="middle">
          <div class="item" id="desk_aside">
               <img src="./public/icons/desks.png">
-              <h3>Доски</h3>
+              <h3>Desks</h3>
          </div>
          <div class="item" id="members">
     
             <img src="./public/icons/members.png">
-          <h3>Учасники</h3>
+          <h3>Members</h3>
             <img src="./public/icons/arrow.png" >
            </div> 
          <div class="item" id="settings" >
             <img src="./public/icons/settings (1).png">
-          <h3>Настройки рабочего
-            пространства</h3>            
+          <h3>Settings</h3>
            </div>
-           <h2>Режимы просмотра рабочего прос…</h2>
+           <h2>Working viewing modes</h2>
            <div class="item" id="table">
             <img src="./public/icons/table.png">
-            <h3>Таблица</h3>
+            <h3>Table</h3>
        </div>
        <div class="item" id="kalendar">
         <img src="./public/icons/kalendar.png">
-        <h3>Каледнарь</h3>
+        <h3>
+            Calendar
+        </h3>
    </div>
              <div class="my_desks">
                   <div class="desk_plus">
-                    <h3>Мои доски</h3>
+                    <h3>My desks</h3>
                     <img src="./public/icons/bigarrow.png" alt="">
                   </div>
                   <div class="desk_item">
@@ -160,14 +162,54 @@
              </div>
          </div>
 
-      </div>
+       
        
     </aside>
+        
+
+      <section class="task_desks">
+          <div   class="box" id="todo">
+                 <h3>To do</h3>
+                 <div class="line"></div>
+                 <div draggable="true" class="task_box">
+                 </div>
+          </div>
+          <div class="box" id="inprogress">
+            <h3>In progress</h3>
+            <div class="line"></div>
+            <div draggable="true"   class="task_box"></div>
+          </div>
+          <div class="box" id="done">
+            <h3>Done</h3>
+            <div class="line"></div>
+            <div draggable="true"  class="task_box"></div>
+          </div>
+      </section>
      </main>
 
+    
 
+     <!-- Модальное окно -->
+<div id="myModal" class="modal">
 
+  <!-- Контент модального окна -->
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+      <form id="myForm" name="add_task">
+          <h1>Add task</h1>
+          <br>
+          <input type="text" name="title" placeholder="Title">
+          <input type="text" name="description" placeholder="Description">
+          <select name="status">
+              <option value="To do">To do </option>
+              <option value="In progress">In progress</option>
+              <option value="Done">Done</option>
+          </select>
+          <button class="submit" type="submit">Add</button>
+      </form>
+  </div>
 
+</div>
 
 
 

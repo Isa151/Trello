@@ -148,7 +148,7 @@ body {
   display: flex;
   align-items: center;
   gap: 3px;
-  font-size: 13.89px;
+  font-size: 14px;
   font-weight: 500;
   color: #172B4D;
 
@@ -183,7 +183,7 @@ body {
 }
 
 .link {
-  width: 118px;
+  width: 80px;
   height: 32px;
   padding: 5.8px, 12px, 6.2px, 8px;
   border-radius: 3px;
@@ -259,6 +259,7 @@ aside img {
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
+  padding-right: 25px;
   color: #9FADBC;
 
 }
@@ -270,20 +271,19 @@ aside img {
   letter-spacing: 0em;
   text-align: left;
   color: #9FADBC;
-  margin-right: 40px;
   padding-bottom: 5px;
 }
 
 .p_info p {
   font-family: Roboto;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
   color:
     #9FADBC;
-  margin-right: 75px;
+  margin-right: 65px;
 }
 
 .close_aside {
@@ -311,12 +311,12 @@ aside img {
 }
 
 #members {
-  margin-right: 23px;
+  padding-right: 48px;
 }
 
 #settings {
-  padding-left: 27px;
-  gap: 20px;
+  padding-right: 122px;
+
 }
 
 .item h3 {
@@ -340,11 +340,11 @@ aside img {
 }
 
 #kalendar {
-  padding-right: 105px;
+  padding-right: 125px;
 }
 
 #table {
-  padding-right: 120px;
+  padding-right: 142px;
 }
 
 
@@ -378,9 +378,58 @@ aside img {
   align-items: center;
   gap: 10px;
   justify-self: start;
-  text-align: left;
   margin-right: 120px;
 }
+.span {
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 500;
+  color: #101204;
+  text-align: center;
+  text-align: start;
+}
+
+.p {
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 300;
+  color: #888888;
+}
+.fill {
+  position: relative;
+  width: 236px;
+  height: 45px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 1px 0px #03040480;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+  margin-right: 20px;
+  cursor: grab;
+  pointer-events: auto;
+  top: 5px;
+  left: 5px;
+  background:#172B4D;
+}
+
+
+
+.hold {
+  cursor: pointer;
+  border: dotted #4CAF50 4px;
+
+
+}
+
+.hovered {
+  background: gray;
+  border-style: dashed;
+}
+
+.invisible {
+  display: none;
+}
+
 
 .desk_box {
   width: 24px;
@@ -392,11 +441,129 @@ aside img {
 }
 
 .desk_item p {
-  color:  #9FADBC;
+  color: #9FADBC;
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
+}
 
+.task_desks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: left;
+  padding: 20px;
+}
+
+.box {
+  width: 272px;
+  height: 130px;
+  height: fit-content;
+  border-radius: 12px;
+  background: #101204;
+  box-shadow: 0px 0px 1px 0px #03040480;
+  box-shadow: 0px 1px 1px 0px #03040480;
+  padding: 20px;
+}
+
+
+#done {
+  height: 120px;
+  margin-bottom: 5px;
+}
+
+.box h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #B6C2CF;
+ 
+}
+
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  margin-top: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background-color: #172B4D;
+  margin: 15% auto;
+  padding: 40px;
+  font-family: Roboto;
+  border:none;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+}
+.modal input{
+  border-radius: 20px ;
+  border: none;cursor: pointer;
+}
+.submit{
+   width: 100%;
+}
+.task_box {
+  width: 236px;
+  height: 45px;
+  border-radius: 8px;
+  background-color: #172B4D;
+  box-shadow: 0px 1px 1px 0px #03040480;
+   text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+  margin: 10px auto;
+  cursor: grab;
+  pointer-events: auto;
+}
+.task_box.dragging {
+  pointer-events: none;
+}
+
+.task_box:active {
+  cursor: grabbing;
+}
+.modal-content input, .modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+.modal-content button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
