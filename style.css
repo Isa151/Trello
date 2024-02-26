@@ -469,6 +469,9 @@ aside img {
 }
 
 
+#inprogress{
+  height: 130px;
+}
 #done {
   height: 120px;
   margin-bottom: 5px;
@@ -481,7 +484,6 @@ aside img {
   letter-spacing: 0em;
   text-align: left;
   color: #B6C2CF;
- 
 }
 
 .line{
@@ -490,7 +492,6 @@ aside img {
   background-color: gray;
   margin-top: 10px;
 }
-
 .modal {
   display: none;
   position: fixed;
@@ -524,8 +525,8 @@ aside img {
   height: 45px;
   border-radius: 8px;
   background-color: #172B4D;
-  box-shadow: 0px 1px 1px 0px #03040480;
-   text-align: left;
+  box-shadow: 0px 1px 1px 0px  #03040480;
+  text-align: left;
   padding-left: 10px;
   padding-top: 5px;
   margin: 10px auto;
@@ -555,6 +556,7 @@ aside img {
   border-radius: 3px;
   cursor: pointer;
 }
+ 
 .close {
   color: #aaa;
   float: right;

@@ -37,19 +37,31 @@ let temp = []
 let temp_id
 
 form.onsubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const fm = new FormData(e.target)
+    const fm = new FormData(e.target);
+    const title = fm.get('title');
+    const description = fm.get('description');
 
-    const todo = { id: Math.random() }
 
-    fm.forEach((val, key) => todo[key] = val)
+    if (!title.trim() || !description.trim()) {
+        alert("Fill out all fields.");
+        return;
+    }
 
-    todos.push(todo)
-    reload(todos, tasks)
+
+    if (todos.some(todo => todo.title === title && todo.description === description)) {
+        alert("This task already taken.");
+        return;
+    }
+
+    const todo = { id: Math.random(), title, description, status: "To do" };
+    todos.push(todo);
+    reload(todos, tasks);
 
     console.log(todo);
-}
+};
+
 
 function reload(arr, places) {
     places.forEach(el => el.innerHTML = "")
