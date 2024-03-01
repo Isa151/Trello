@@ -582,3 +582,18 @@ aside img {
   text-decoration: none;
   cursor: pointer;
 }
+
+.trash_box {
+  width: 500px;
+  height: 200px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: red;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.trash_box.show {
+  opacity: 1;
+}

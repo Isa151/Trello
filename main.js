@@ -137,6 +137,8 @@ function dragStart() {
     this.classList.add('hold')
     setTimeout(() => (this.className = 'invisible'), 0)
     
+    const trashBox = document.querySelector('trashBox');
+    trashBox.classList.add('show');
 }   
 
 function dragEnd() {
